@@ -1,18 +1,18 @@
-import { ImageCard } from "../ImageCard/ImageCard";
+import { ImageCard } from "../ImageCard";
 
-export const ImageGallery = ({ onClick, pictures }) => {
+export const ImageGallery = ({ fechResult, onClick }) => {
   return (
-    <ul onClick={onClick}>
-      {pictures.map(({ id, webformatURL, tags, largeImageURL }) => {
-        return (
-          <ImageCard
-            key={id}
-            imgSrc={webformatURL}
-            alt={tags}
-            imgModal={largeImageURL}
-          />
-        );
-      })}
+    <ul>
+      {fechResult.map((item) => (
+        <li
+          key={item.id}
+          onClick={() => {
+            onClick(item);
+          }}
+        >
+          <ImageCard param={item} />
+        </li>
+      ))}
     </ul>
   );
 };
