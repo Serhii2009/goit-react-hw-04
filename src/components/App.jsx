@@ -55,7 +55,7 @@ export const App = () => {
       try {
         const fechedData = await feach(query.split("/")[1], page);
 
-        setData([...data, ...fechedData.results]);
+        setData((prevState) => [...prevState, ...fechedData.results]);
         setTotalPage(fechedData.total_pages);
       } catch (error) {
         setError(true);
@@ -64,7 +64,7 @@ export const App = () => {
       }
     }
     fechData();
-  }, [query, page, data]);
+  }, [query, page]);
 
   return (
     <>
@@ -74,7 +74,7 @@ export const App = () => {
         <ImageGallery fechResult={data} onClick={openModal} />
       )}
       {loading && <Loader />}
-      {data.length > 0 && !loading && totalPage !== page && (
+      {data.length > 0 && totalPage !== page && (
         <LoadMoreBtn onClick={handleLoadMore} />
       )}
       <Toaster position="top-center" reverseOrder={false} />
