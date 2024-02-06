@@ -5,7 +5,7 @@ export const feach = async (query, page) => {
     params: {
       query,
       page,
-      client_id: "v-NocWjoOb_LPFFOM7qt5Kaj1nLlaip-hwBUmam8J4Y",
+      client_id: "7O-sZhdzOl6nsN2tROhXit50lo1uGuCAGJhMEvRa-oE",
       per_page: 5,
       orientation: "squarish",
     },

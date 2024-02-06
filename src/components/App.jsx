@@ -77,7 +77,7 @@ export const App = () => {
       {data.length > 0 && !loading && totalPage !== page && (
         <LoadMoreBtn onClick={handleLoadMore} />
       )}
-      <Toaster position="bottom-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
