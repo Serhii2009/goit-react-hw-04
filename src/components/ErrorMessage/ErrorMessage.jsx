@@ -1,7 +1,7 @@
 export const ErrorMessage = () => {
   return (
     <div>
-      <b>Oh, something went wrong😭. Try refreshing the page🥹.</b>
+      <b>Something went wrong</b>
     </div>
   );
 };

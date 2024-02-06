@@ -1,4 +1,5 @@
 import toast from "react-hot-toast";
+import css from "./SearchForm.module.css";
 
 export const SearchForm = ({ onSearch }) => {
   const hendelSubmit = (e) => {
@@ -19,12 +20,12 @@ export const SearchForm = ({ onSearch }) => {
   return (
     <>
       <header onScrollCapture={handleScrol}>
-        <form onSubmit={hendelSubmit}>
+        <form className={css.headerForm} onSubmit={hendelSubmit}>
           <input
             type="text"
             autoComplete="off"
             autoFocus
-            placeholder="Search images and photos"
+            placeholder="Search images"
             name="query"
           />
           <button type="submit">Search</button>
