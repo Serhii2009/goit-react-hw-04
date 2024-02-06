@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 
 import { SearchForm } from "./SearchForm/SearchForm";
 import { useEffect, useState } from "react";
